@@ -1,1 +1,12 @@
 /* You can add global styles to this file, and also import other style files */
+
+body {
+    position: relative;
+    margin: 0;
+    padding: 2% 3%;
+    background: #FCFCFF 0% 0% no-repeat padding-box;
+    font-family: 'Open Sans', sans-serif;
+    background: transparent url('./assets/images/blob-small.svg') -120px 222px no-repeat padding-box;
+    z-index: 0;
+    overflow-x: hidden;
+}

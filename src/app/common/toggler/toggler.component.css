@@ -1,0 +1,28 @@
+.toggle-btn {
+    width: 35px;
+    height: 22px;
+    border-radius: 110px;
+    background-color: #663399;
+    float: right;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
+.small-circle-toggler {
+    width: 20px;
+    height: 19.5px;
+    border-radius: 50%;
+    margin: 1px 1px;
+    background-color: #fff;
+    float: right;
+    transition: all 7s;
+}
+
+.float-left {
+    float: left;
+}
+
+.ch-bg {
+    background-color: #e4e4e4;
+    opacity: 1;
+}

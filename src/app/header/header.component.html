@@ -1,0 +1,92 @@
+<div class="row">
+    <div class="col-md-6 inner-pad">
+        <img src="../../assets/images/We make it Super Sim.svg" alt="we make it super simple" class="heading-img">
+        <div class="line"></div>
+        <img src="../../assets/images/collect_img-video.png" alt="img video" class="video-img">
+        <img src="../../assets/images/accounting_dots.svg" alt="img video" class="doted-bg">
+    </div>
+    <div class="col-md-6 margin-top-100">
+        <div class="outer-calc">
+            <div class="emi-calc">
+                <div class="emi-calc-head">
+                    Eligibility Calculator
+                </div>
+                <div class="emi-calc-body">
+                    <label for="mon-inc">Monthly Income:</label>
+                    <div class="mon-income">
+                        &#x20b9; <span class="text-bold"> {{getMonthlyIncome()}} </span>
+                    </div>
+                    <input type="range" min="100000" max="300000" value="{{monthlyIncome}}" class="slider" id="mon-inc"
+                        (input)="setMonthlyIncome($event)">
+                    <span class="range-text">
+                        &#x20b9; 1,00,000
+                    </span>
+                    <span class="range-text text-align-right mt-1">
+                        &#x20b9; 3,00,000
+                    </span>
+                    <div class="margin-top-bottom-10"></div>
+                    <label for="mon-exp">Monthly Expense:</label>
+                    <div class="mon-income">
+                        &#x20b9; <span class="text-bold"> {{getMonthlyExpense()}} </span>
+                    </div>
+                    <input type="range" min="100000" max="300000" value="150000" class="slider" id="mon-exp"
+                        [value]="monthlyExpense" (input)="setMonthlyExpense($event)">
+                    <div class="margin-top-bottom-10"></div>
+                    <label for="re-pay">Repayment Tenure:</label>
+                    <select id="re-pay" class="custom-select">
+                        <option value="1" class="custom-option">6 Months</option>
+                        <option value="2" class="custom-option">12 Months</option>
+                    </select>
+
+                    <div class="margin-top-bottom-10"></div>
+
+                    <div>
+                        <span class="do-u-hv-ex-loan">Do you have any existing Loans?</span>
+                        <input type="checkbox" class="hidden">
+                        <app-toggler [isChecked]="isChecked" (click)="onClickCheckbox()"></app-toggler>
+                    </div>
+
+                    <div class="margin-top-bottom-10"></div>
+
+                    <label for="emi-e">EMI of existing loan (optional) :</label>
+                    <input type="text" placeholder=" &#x20b9; 15,000" id="emi-e">
+
+                </div>
+            </div>
+            <div class="calc">
+                <div class="loan-amt">
+                    <div class="head">
+                        <span class="heading">
+                            Loan Amount
+                        </span>
+
+                        <br>
+
+                        <span class="amt">
+                            &#x20b9; 1,00,000
+                        </span>
+
+                        <br>
+
+                        <div class="margin-top-bottom-15"></div>
+
+                        <span class="heading">
+                            Your EMI will be
+                        </span>
+
+                        <br>
+
+                        <span class="amt">
+                            &#x20b9; 15,000
+                        </span>
+
+                        <button type="button" class="btn custom-btn-money">GET MONEY</button>
+
+                    </div>
+                </div>
+                <br>
+            </div>
+        </div>
+        <img src="../../assets/images/accounting_dots.svg" alt="img video" class="dotted-bg-1">
+    </div>
+</div>
